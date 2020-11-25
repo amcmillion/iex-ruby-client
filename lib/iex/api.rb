@@ -18,6 +18,7 @@ require_relative 'endpoints/sectors'
 require_relative 'endpoints/crypto'
 require_relative 'endpoints/ref_data'
 require_relative 'endpoints/stock_market'
+require_relative 'endpoints/upcoming_events'
 
 require_relative 'api/config/logger'
 require_relative 'api/config/client'

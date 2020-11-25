@@ -20,7 +20,12 @@ module IEX
       private
 
       def request(method, path, options)
-        path = [endpoint, path].join('/')
+        path = if options[:use_sandbox]
+                 options.delete(:use_sandbox)
+                 ['https://sandbox.iexapis.com/stable', path].join('/')
+               else
+                 [endpoint, path].join('/')
+               end
         response = connection.send(method) do |request|
           case method
           when :get, :delete
