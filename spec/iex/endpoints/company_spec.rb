@@ -3,9 +3,9 @@ require 'spec_helper'
 describe IEX::Resources::Company do
   include_context 'client'
 
-  context 'known symbol', vcr: { cassette_name: 'company/msft' } do
+  context 'known symbol', vcr: { cassette_name: 'iex/company/msft' } do
     subject do
-      client.company('MSFT')
+      iex_client.company('MSFT')
     end
     it 'retrieves company information' do
       expect(subject.symbol).to eq 'MSFT'
@@ -22,9 +22,9 @@ describe IEX::Resources::Company do
       expect(subject.tags).to eq ['Technology Services', 'Packaged Software']
     end
   end
-  context 'invalid symbol', vcr: { cassette_name: 'company/invalid' } do
+  context 'invalid symbol', vcr: { cassette_name: 'iex/company/invalid' } do
     subject do
-      client.company('INVALID')
+      iex_client.company('INVALID')
     end
     it 'fails with SymbolNotFoundError' do
       expect { subject }.to raise_error IEX::Errors::SymbolNotFoundError, 'Symbol INVALID Not Found'

@@ -3,9 +3,9 @@ require 'spec_helper'
 describe IEX::Resources::Crypto do
   include_context 'client'
 
-  context 'gets crypto information', vcr: { cassette_name: 'crypto/btcusdt' } do
+  context 'gets crypto information', vcr: { cassette_name: 'iex/crypto/btcusdt' } do
     subject do
-      client.crypto('BTCUSDT')
+      iex_client.crypto('BTCUSDT')
     end
     it 'retrieves real-time information' do
       expect(subject.symbol).to eq 'BTCUSDT'

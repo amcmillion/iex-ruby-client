@@ -3,9 +3,9 @@ require 'spec_helper'
 describe IEX::Api::Client do
   include_context 'client'
 
-  describe '#ref_data_isin', vcr: { cassette_name: 'ref-data/isin' } do
+  describe '#ref_data_isin', vcr: { cassette_name: 'iex/ref-data/isin' } do
     context 'without options' do
-      subject { client.ref_data_isin(['US0378331005']) }
+      subject { iex_client.ref_data_isin(['US0378331005']) }
 
       it 'converts ISIN to IEX Cloud symbols' do
         expect(subject.count).to eq(2)
@@ -14,8 +14,8 @@ describe IEX::Api::Client do
       end
     end
 
-    context 'graciously handle parameter as string', vcr: { cassette_name: 'ref-data/isin' } do
-      subject { client.ref_data_isin('US0378331005') }
+    context 'graciously handle parameter as string', vcr: { cassette_name: 'iex/ref-data/isin' } do
+      subject { iex_client.ref_data_isin('US0378331005') }
 
       it 'converts ISIN to IEX Cloud symbols' do
         expect(subject.count).to eq(2)
@@ -24,8 +24,8 @@ describe IEX::Api::Client do
       end
     end
 
-    context 'with mapped option', vcr: { cassette_name: 'ref-data/isin_mapped' } do
-      subject { client.ref_data_isin(%w[US0378331005 US5949181045], mapped: true) }
+    context 'with mapped option', vcr: { cassette_name: 'iex/ref-data/isin_mapped' } do
+      subject { iex_client.ref_data_isin(%w[US0378331005 US5949181045], mapped: true) }
 
       it 'converts ISINs to IEX Cloud symbols mapped by ISIN' do
         expect(subject.keys).to contain_exactly('US0378331005', 'US5949181045')
@@ -39,8 +39,8 @@ describe IEX::Api::Client do
       end
     end
 
-    context 'with wrong ISIN', vcr: { cassette_name: 'ref-data/wrong_isin_mapped' } do
-      subject { client.ref_data_isin(%w[WRONG12345], mapped: true) }
+    context 'with wrong ISIN', vcr: { cassette_name: 'iex/ref-data/wrong_isin_mapped' } do
+      subject { iex_client.ref_data_isin(%w[WRONG12345], mapped: true) }
 
       it 'returns nil value for given ISIN' do
         expect(subject).to eq('WRONG12345' => nil)
@@ -48,15 +48,15 @@ describe IEX::Api::Client do
     end
   end
 
-  describe '#ref_data_symbols', vcr: { cassette_name: 'ref-data/symbols' } do
-    subject { client.ref_data_symbols }
+  describe '#ref_data_symbols', vcr: { cassette_name: 'iex/ref-data/symbols' } do
+    subject { iex_client.ref_data_symbols }
 
     it 'retrieves all symbols' do
       expect(subject.count).to eq 8808
     end
 
     context 'first symbol' do
-      subject { client.ref_data_symbols.first }
+      subject { iex_client.ref_data_symbols.first }
       it 'retrieves a symbol data' do
         expect(subject.symbol).to eq 'A'
         expect(subject.exchange).to eq 'NYS'

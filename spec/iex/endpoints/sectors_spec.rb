@@ -4,9 +4,9 @@ describe IEX::Resources::Sectors do
   include_context 'client'
 
   context 'known symbol' do
-    context 'with defaults', vcr: { cassette_name: 'sectors/sectors-performance' } do
+    context 'with defaults', vcr: { cassette_name: 'iex/sectors/sectors-performance' } do
       subject do
-        client.sectors('market')
+        iex_client.sectors('market')
       end
       let(:Sectors) { subject.first }
       it 'retrieves Sectors' do
@@ -18,9 +18,9 @@ describe IEX::Resources::Sectors do
       end
     end
   end
-  context 'invalid symbol', vcr: { cassette_name: 'sectors/invalid' } do
+  context 'invalid symbol', vcr: { cassette_name: 'iex/sectors/invalid' } do
     subject do
-      client.sectors('INVALID')
+      iex_client.sectors('INVALID')
     end
     it 'fails with SymbolNotFoundError' do
       expect { subject }.to raise_error IEX::Errors::SymbolNotFoundError, 'Symbol INVALID Not Found'

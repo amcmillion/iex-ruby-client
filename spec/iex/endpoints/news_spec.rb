@@ -4,9 +4,9 @@ describe IEX::Resources::News do
   include_context 'client'
 
   context 'known symbol' do
-    context 'with defaults', vcr: { cassette_name: 'news/msft' } do
+    context 'with defaults', vcr: { cassette_name: 'iex/news/msft' } do
       subject do
-        client.news('MSFT')
+        iex_client.news('MSFT')
       end
       let(:news) { subject.first }
       it 'retrieves news' do
@@ -16,18 +16,18 @@ describe IEX::Resources::News do
         expect(news.related).to eq(['MSFT'])
       end
     end
-    context 'with range', vcr: { cassette_name: 'news/msft_7' } do
+    context 'with range', vcr: { cassette_name: 'iex/news/msft_7' } do
       subject do
-        client.news('MSFT', 7)
+        iex_client.news('MSFT', 7)
       end
       it 'retrieves news' do
         expect(subject.size).to eq 7
       end
     end
   end
-  context 'invalid symbol', vcr: { cassette_name: 'news/invalid' } do
+  context 'invalid symbol', vcr: { cassette_name: 'iex/news/invalid' } do
     subject do
-      client.news('INVALID')
+      iex_client.news('INVALID')
     end
     it 'fails with SymbolNotFoundError' do
       expect { subject }.to raise_error IEX::Errors::SymbolNotFoundError, 'Symbol INVALID Not Found'

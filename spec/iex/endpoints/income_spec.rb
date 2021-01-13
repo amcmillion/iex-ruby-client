@@ -6,9 +6,9 @@ describe IEX::Resources::Income do
   include_context 'client'
 
   context 'known symbol' do
-    context 'with defaults', vcr: { cassette_name: 'income/msft' } do
+    context 'with defaults', vcr: { cassette_name: 'iex/income/msft' } do
       subject do
-        client.income('MSFT')
+        iex_client.income('MSFT')
       end
       let(:income) { subject.first }
 
@@ -50,18 +50,18 @@ describe IEX::Resources::Income do
     end
   end
 
-  context 'no result', vcr: { cassette_name: 'income/nsrgy' } do
+  context 'no result', vcr: { cassette_name: 'iex/income/nsrgy' } do
     subject do
-      client.income('nsrgy')
+      iex_client.income('nsrgy')
     end
     it 'returns empty array' do
       expect(subject).to eq []
     end
   end
 
-  context 'invalid symbol', vcr: { cassette_name: 'income/invalid' } do
+  context 'invalid symbol', vcr: { cassette_name: 'iex/income/invalid' } do
     subject do
-      client.income('INVALID')
+      iex_client.income('INVALID')
     end
     it 'fails with SymbolNotFoundError' do
       expect { subject }.to raise_error IEX::Errors::SymbolNotFoundError, 'Symbol INVALID Not Found'

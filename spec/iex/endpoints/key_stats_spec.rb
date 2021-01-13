@@ -3,9 +3,9 @@ require 'spec_helper'
 describe IEX::Resources::KeyStats do
   include_context 'client'
 
-  context 'general information', vcr: { cassette_name: 'key_stats/msft' } do
+  context 'general information', vcr: { cassette_name: 'iex/key_stats/msft' } do
     subject do
-      client.key_stats('MSFT')
+      iex_client.key_stats('MSFT')
     end
     it 'retrieves a keyStats' do
       expect(subject.company_name).to eq 'Microsoft Corp.'
@@ -63,9 +63,9 @@ describe IEX::Resources::KeyStats do
     end
   end
 
-  context 'invalid symbol', vcr: { cassette_name: 'key_stats/invalid' } do
+  context 'invalid symbol', vcr: { cassette_name: 'iex/key_stats/invalid' } do
     subject do
-      client.key_stats('INVALID')
+      iex_client.key_stats('INVALID')
     end
 
     it 'fails with SymbolNotFoundError' do

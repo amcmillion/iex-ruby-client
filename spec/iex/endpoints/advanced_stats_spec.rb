@@ -3,9 +3,9 @@ require 'spec_helper'
 describe IEX::Resources::AdvancedStats do
   include_context 'client'
 
-  context 'general information', vcr: { cassette_name: 'advanced_stats/msft' } do
+  context 'general information', vcr: { cassette_name: 'iex/advanced_stats/msft' } do
     subject do
-      client.advanced_stats('MSFT')
+      iex_client.advanced_stats('MSFT')
     end
 
     it 'fetches advanced stats' do
@@ -98,9 +98,9 @@ describe IEX::Resources::AdvancedStats do
     end
   end
 
-  context 'invalid symbol', vcr: { cassette_name: 'advanced_stats/invalid' } do
+  context 'invalid symbol', vcr: { cassette_name: 'iex/advanced_stats/invalid' } do
     subject do
-      client.advanced_stats('INVALID')
+      iex_client.advanced_stats('INVALID')
     end
 
     it 'fails with SymbolNotFoundError' do

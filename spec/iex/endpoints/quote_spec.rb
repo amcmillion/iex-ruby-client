@@ -2,9 +2,9 @@ require 'spec_helper'
 
 describe IEX::Resources::Quote do
   include_context 'client'
-  context 'known symbol', vcr: { cassette_name: 'quote/msft' } do
+  context 'known symbol', vcr: { cassette_name: 'iex/quote/msft' } do
     subject do
-      client.quote('MSFT')
+      iex_client.quote('MSFT')
     end
     it 'retrieves a quote' do
       expect(subject.symbol).to eq 'MSFT'
@@ -29,9 +29,9 @@ describe IEX::Resources::Quote do
     end
   end
 
-  context 'invalid symbol', vcr: { cassette_name: 'quote/invalid' } do
+  context 'invalid symbol', vcr: { cassette_name: 'iex/quote/invalid' } do
     subject do
-      client.quote('INVALID')
+      iex_client.quote('INVALID')
     end
     it 'fails with SymbolNotFoundError' do
       expect { subject }.to raise_error IEX::Errors::SymbolNotFoundError, 'Symbol INVALID Not Found'

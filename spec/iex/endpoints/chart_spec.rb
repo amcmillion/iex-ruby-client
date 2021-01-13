@@ -3,9 +3,9 @@ require 'spec_helper'
 describe IEX::Resources::Chart do
   include_context 'client'
 
-  context 'known symbol', vcr: { cassette_name: 'chart/msft' } do
+  context 'known symbol', vcr: { cassette_name: 'iex/chart/msft' } do
     subject do
-      client.chart('MSFT')
+      iex_client.chart('MSFT')
     end
     let(:first) { subject.first }
     let(:last) { subject.last }
@@ -20,9 +20,9 @@ describe IEX::Resources::Chart do
     end
   end
 
-  context '1d', vcr: { cassette_name: 'chart/1d' } do
+  context '1d', vcr: { cassette_name: 'iex/chart/1d' } do
     subject do
-      client.chart('MSFT', '1d')
+      iex_client.chart('MSFT', '1d')
     end
     let(:first) { subject.first }
     let(:last) { subject.last }
@@ -36,9 +36,9 @@ describe IEX::Resources::Chart do
     end
   end
 
-  context 'with options', vcr: { cassette_name: 'chart/chartInterval' } do
+  context 'with options', vcr: { cassette_name: 'iex/chart/chartInterval' } do
     subject do
-      client.chart('MSFT', '1d', chart_interval: 10)
+      iex_client.chart('MSFT', '1d', chart_interval: 10)
     end
     let(:first) { subject.first }
     it 'retrieves a 1 day chart with chartInterval applied' do
@@ -47,9 +47,9 @@ describe IEX::Resources::Chart do
     end
   end
 
-  context 'date', vcr: { cassette_name: 'chart/20190306' } do
+  context 'date', vcr: { cassette_name: 'iex/chart/20190306' } do
     subject do
-      client.chart('MSFT', Date.new(2019, 3, 6))
+      iex_client.chart('MSFT', Date.new(2019, 3, 6))
     end
     let(:first) { subject.first }
     it 'retrieves a 1 day chart from 2019/3/6' do
@@ -59,9 +59,9 @@ describe IEX::Resources::Chart do
     end
   end
 
-  context 'dynamic 1m', vcr: { cassette_name: 'chart/dynamic/1m' } do
+  context 'dynamic 1m', vcr: { cassette_name: 'iex/chart/dynamic/1m' } do
     subject do
-      client.chart('MSFT', :dynamic)
+      iex_client.chart('MSFT', :dynamic)
     end
     let(:first) { subject.first }
     it 'retrieves a 1m chart from' do
@@ -71,18 +71,18 @@ describe IEX::Resources::Chart do
     end
   end
 
-  context 'invalid symbol', vcr: { cassette_name: 'chart/invalid' } do
+  context 'invalid symbol', vcr: { cassette_name: 'iex/chart/invalid' } do
     subject do
-      client.chart('INVALID')
+      iex_client.chart('INVALID')
     end
     it 'fails with SymbolNotFoundError' do
       expect { subject }.to raise_error IEX::Errors::SymbolNotFoundError, 'Symbol INVALID Not Found'
     end
   end
 
-  context 'with client error', vcr: { cassette_name: 'chart/bad_option' } do
+  context 'with client error', vcr: { cassette_name: 'iex/chart/bad_option' } do
     subject do
-      client.chart('MSFT', '1d', chart_interval: 10, bad_option: 'option')
+      iex_client.chart('MSFT', '1d', chart_interval: 10, bad_option: 'option')
     end
 
     it 'fails with ClientError' do

@@ -3,9 +3,9 @@ require 'spec_helper'
 describe IEX::Resources::LargestTrades do
   include_context 'client'
 
-  context 'retrieves the largest trade for a specific stock', vcr: { cassette_name: 'largest-trades/aapl' } do
+  context 'retrieves the largest trade for a specific stock', vcr: { cassette_name: 'iex/largest-trades/aapl' } do
     subject do
-      client.largest_trades('aapl')
+      iex_client.largest_trades('aapl')
     end
     it 'retrieve largest trades' do
       expect(subject.first.size).to eq 18_400
@@ -17,9 +17,9 @@ describe IEX::Resources::LargestTrades do
     end
   end
 
-  context 'invalid symbol', vcr: { cassette_name: 'largest-trades/invalid' } do
+  context 'invalid symbol', vcr: { cassette_name: 'iex/largest-trades/invalid' } do
     subject do
-      client.largest_trades('INVALID')
+      iex_client.largest_trades('INVALID')
     end
     it 'fails with SymbolNotFoundError' do
       expect { subject }.to raise_error IEX::Errors::SymbolNotFoundError, 'Symbol INVALID Not Found'

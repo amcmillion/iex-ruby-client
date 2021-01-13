@@ -3,9 +3,9 @@ require 'spec_helper'
 describe IEX::Resources::OHLC do
   include_context 'client'
 
-  context 'known symbol', vcr: { cassette_name: 'ohlc/msft' } do
+  context 'known symbol', vcr: { cassette_name: 'iex/ohlc/msft' } do
     subject do
-      client.ohlc('MSFT')
+      iex_client.ohlc('MSFT')
     end
     it 'retrieves a close price' do
       expect(subject.close.price).to eq 119.36
@@ -27,9 +27,9 @@ describe IEX::Resources::OHLC do
     end
   end
 
-  context 'market', vcr: { cassette_name: 'ohlc/market' } do
+  context 'market', vcr: { cassette_name: 'iex/ohlc/market' } do
     subject do
-      client.market
+      iex_client.market
     end
     it 'retrieves a right number of stocks' do
       expect(subject.size).to eq 8890

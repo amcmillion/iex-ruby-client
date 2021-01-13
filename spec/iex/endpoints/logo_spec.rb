@@ -3,9 +3,9 @@ require 'spec_helper'
 describe IEX::Resources::Logo do
   include_context 'client'
 
-  context "retrieves company's logo", vcr: { cassette_name: 'logo/msft' } do
+  context "retrieves company's logo", vcr: { cassette_name: 'iex/logo/msft' } do
     subject do
-      client.logo('MSFT')
+      iex_client.logo('MSFT')
     end
 
     it 'retrieves a logo' do

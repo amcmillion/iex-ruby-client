@@ -7,9 +7,9 @@ describe IEX::Resources::HistorialPrices do
 
   context 'known symbol' do
     context 'with valid params' do
-      context 'with defaults', vcr: { cassette_name: 'historical_prices/msft' } do
+      context 'with defaults', vcr: { cassette_name: 'iex/historical_prices/msft' } do
         subject do
-          client.historical_prices('MSFT')
+          iex_client.historical_prices('MSFT')
         end
         let(:historical_price) { subject.first }
 
@@ -43,8 +43,8 @@ describe IEX::Resources::HistorialPrices do
         end
       end
 
-      context 'with a valid range provided', vcr: { cassette_name: 'historical_prices/msft_5d' } do
-        subject { client.historical_prices('MSFT', range: '5d') }
+      context 'with a valid range provided', vcr: { cassette_name: 'iex/historical_prices/msft_5d' } do
+        subject { iex_client.historical_prices('MSFT', range: '5d') }
         let(:historical_price) { subject.last }
 
         it 'retrieves historical prices' do
@@ -78,9 +78,9 @@ describe IEX::Resources::HistorialPrices do
       end
 
       context 'with a range provided for a specific date (passed as a Date object) and chartByDay param',
-              vcr: { cassette_name: 'historical_prices/msft_date_and_chart_by_day' } do
+              vcr: { cassette_name: 'iex/historical_prices/msft_date_and_chart_by_day' } do
         options = { range: 'date', date: Date.parse('2020-11-10'), chartByDay: 'true' }
-        subject { client.historical_prices('MSFT', options) }
+        subject { iex_client.historical_prices('MSFT', options) }
         let(:historical_price) { subject.first }
 
         it 'retrieves historical prices' do
@@ -114,9 +114,9 @@ describe IEX::Resources::HistorialPrices do
       end
 
       context 'with a range provided for a specific date (passed as a string) and chartByDay param',
-              vcr: { cassette_name: 'historical_prices/msft_date_and_chart_by_day' } do
+              vcr: { cassette_name: 'iex/historical_prices/msft_date_and_chart_by_day' } do
         options = { range: 'date', date: '20201110', chartByDay: 'true' }
-        subject { client.historical_prices('MSFT', options) }
+        subject { iex_client.historical_prices('MSFT', options) }
         let(:historical_price) { subject.first }
 
         it 'retrieves historical prices' do
@@ -151,8 +151,8 @@ describe IEX::Resources::HistorialPrices do
     end
 
     context 'with invalid params' do
-      context 'with an invalid range', vcr: { cassette_name: 'historical_prices/invalid_range' } do
-        subject { client.historical_prices('MSFT', range: 'invalid') }
+      context 'with an invalid range', vcr: { cassette_name: 'iex/historical_prices/invalid_range' } do
+        subject { iex_client.historical_prices('MSFT', range: 'invalid') }
 
         it 'fails with ArgumentError' do
           expect { subject }.to raise_error IEX::Errors::PermissionDeniedError
@@ -160,7 +160,7 @@ describe IEX::Resources::HistorialPrices do
       end
 
       context "with a range as 'date' but without a date param" do
-        subject { client.historical_prices('MSFT', range: 'date') }
+        subject { iex_client.historical_prices('MSFT', range: 'date') }
 
         it 'fails with ArgumentError' do
           expect { subject }.to raise_error ArgumentError
@@ -168,7 +168,7 @@ describe IEX::Resources::HistorialPrices do
       end
 
       context "with a range as 'date' but without chartByDay query param" do
-        subject { client.historical_prices('MSFT', range: 'date', date: Date.parse('2020-11-10')) }
+        subject { iex_client.historical_prices('MSFT', range: 'date', date: Date.parse('2020-11-10')) }
 
         it 'fails with ArgumentError' do
           expect { subject }.to raise_error ArgumentError
@@ -176,8 +176,8 @@ describe IEX::Resources::HistorialPrices do
       end
 
       context "with a range as 'date' but without date as a Date object that is incorrectly formatted",
-              vcr: { cassette_name: 'historical_prices/invalid_date' } do
-        subject { client.historical_prices('MSFT', range: 'date', date: '2020-11-10', chartByDay: 'true') }
+              vcr: { cassette_name: 'iex/historical_prices/invalid_date' } do
+        subject { iex_client.historical_prices('MSFT', range: 'date', date: '2020-11-10', chartByDay: 'true') }
 
         it 'fails with ArgumentError' do
           expect { subject }.to raise_error IEX::Errors::ClientError
@@ -186,18 +186,18 @@ describe IEX::Resources::HistorialPrices do
     end
   end
 
-  context 'no result', vcr: { cassette_name: 'historical_prices/abcd' } do
+  context 'no result', vcr: { cassette_name: 'iex/historical_prices/abcd' } do
     subject do
-      client.historical_prices('abcd')
+      iex_client.historical_prices('abcd')
     end
     it 'returns empty array' do
       expect(subject).to eq []
     end
   end
 
-  context 'invalid symbol', vcr: { cassette_name: 'historical_prices/invalid' } do
+  context 'invalid symbol', vcr: { cassette_name: 'iex/historical_prices/invalid' } do
     subject do
-      client.historical_prices('INVALID')
+      iex_client.historical_prices('INVALID')
     end
     it 'fails with SymbolNotFoundError' do
       expect { subject }.to raise_error IEX::Errors::SymbolNotFoundError, 'Symbol INVALID Not Found'

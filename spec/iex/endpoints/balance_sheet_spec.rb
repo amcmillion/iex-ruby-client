@@ -3,9 +3,9 @@ require 'spec_helper'
 describe IEX::Resources::BalanceSheet do
   include_context 'client'
 
-  context 'general information', vcr: { cassette_name: 'balance_sheet/msft' } do
+  context 'general information', vcr: { cassette_name: 'iex/balance_sheet/msft' } do
     subject do
-      client.balance_sheet('MSFT')
+      iex_client.balance_sheet('MSFT')
     end
     let(:balance_sheet) { subject.first }
 
@@ -68,9 +68,9 @@ describe IEX::Resources::BalanceSheet do
     end
   end
 
-  context 'invalid symbol', vcr: { cassette_name: 'balance_sheet/invalid' } do
+  context 'invalid symbol', vcr: { cassette_name: 'iex/balance_sheet/invalid' } do
     subject do
-      client.balance_sheet('INVALID')
+      iex_client.balance_sheet('INVALID')
     end
 
     it 'fails with SymbolNotFoundError' do

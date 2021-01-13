@@ -4,9 +4,9 @@ describe IEX::Resources::Earnings do
   include_context 'client'
 
   context 'known symbol' do
-    context 'with defaults', vcr: { cassette_name: 'earnings/msft' } do
+    context 'with defaults', vcr: { cassette_name: 'iex/earnings/msft' } do
       subject do
-        client.earnings('MSFT')
+        iex_client.earnings('MSFT')
       end
       let(:earnings) { subject.first }
       it 'retrieves earnings' do
@@ -25,9 +25,9 @@ describe IEX::Resources::Earnings do
       end
     end
   end
-  context 'invalid symbol', vcr: { cassette_name: 'earnings/invalid' } do
+  context 'invalid symbol', vcr: { cassette_name: 'iex/earnings/invalid' } do
     subject do
-      client.earnings('INVALID')
+      iex_client.earnings('INVALID')
     end
     it 'fails with SymbolNotFoundError' do
       expect { subject }.to raise_error IEX::Errors::SymbolNotFoundError, 'Symbol INVALID Not Found'

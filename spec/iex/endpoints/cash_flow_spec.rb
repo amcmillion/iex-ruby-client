@@ -3,9 +3,9 @@ require 'spec_helper'
 describe IEX::Resources::CashFlow do
   include_context 'client'
 
-  context 'general information', vcr: { cassette_name: 'cash_flow/msft' } do
+  context 'general information', vcr: { cassette_name: 'iex/cash_flow/msft' } do
     subject do
-      client.cash_flow('MSFT')
+      iex_client.cash_flow('MSFT')
     end
     let(:cash_flow) { subject.first }
 
@@ -47,9 +47,9 @@ describe IEX::Resources::CashFlow do
     end
   end
 
-  context 'invalid symbol', vcr: { cassette_name: 'cash_flow/invalid' } do
+  context 'invalid symbol', vcr: { cassette_name: 'iex/cash_flow/invalid' } do
     subject do
-      client.cash_flow('INVALID')
+      iex_client.cash_flow('INVALID')
     end
 
     it 'fails with SymbolNotFoundError' do

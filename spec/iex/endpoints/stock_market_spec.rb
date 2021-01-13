@@ -3,8 +3,8 @@ require 'spec_helper'
 describe IEX::Endpoints::StockMarket do
   include_context 'client'
 
-  describe '#stock_market_list', vcr: { cassette_name: 'stock_market/list_mostactive' } do
-    subject { client.stock_market_list(:mostactive) }
+  describe '#stock_market_list', vcr: { cassette_name: 'iex/stock_market/list_mostactive' } do
+    subject { iex_client.stock_market_list(:mostactive) }
 
     it 'retrieves a list of quotes' do
       expect(subject).to all(be_a(IEX::Resources::Quote))
