@@ -11,6 +11,7 @@ Naming/MethodName:
 Naming/FileName:
   Exclude:
     - "lib/iex-ruby-client.rb"
+    - "lib/cloud-quote-ruby-client.rb"
 
 Style/Documentation:
   Enabled: false

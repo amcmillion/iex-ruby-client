@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.cloudquote.io/benzinga/getGuidance.json?T=0l72l9v52cq&date_from=2021-01-05&date_to=2021-01-05
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      Content-Type:
+      - application/json; charset=utf-8
+      User-Agent:
+      - CloudQuote Ruby Client/1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - Express
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"1500-a8lUUlLAlZyKxnMSGG9W1/xpqAw"
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 13 Jan 2021 05:29:54 GMT
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"rows":[{"id":"5ff4dbbb2bbc220001d6f1cd","date":"2021-01-05","time":"16:35:55","ticker":"PROF","exchange":"NASDAQ","name":"Profound
+        Medical","period":"FY","period_year":2020,"is_primary":"Y","prelim":"Y","currency":"USD","eps_type":"","eps_guidance_est":"","eps_guidance_max":"","eps_guidance_min":"","eps_guidance_prior_max":"","eps_guidance_prior_min":"","revenue_type":"GAAP","revenue_guidance_est":"","revenue_guidance_max":"9700000.000","revenue_guidance_min":"9700000.000","revenue_guidance_prior_max":"","revenue_guidance_prior_min":"","importance":0,"notes":"","updated":1609882616},{"id":"5ff4dbba2bbc220001d6f1cb","date":"2021-01-05","time":"16:35:54","ticker":"PROF","exchange":"NASDAQ","name":"Profound
+        Medical","period":"Q4","period_year":2020,"is_primary":"Y","prelim":"Y","currency":"USD","eps_type":"","eps_guidance_est":"","eps_guidance_max":"","eps_guidance_min":"","eps_guidance_prior_max":"","eps_guidance_prior_min":"","revenue_type":"GAAP","revenue_guidance_est":"","revenue_guidance_max":"3700000.000","revenue_guidance_min":"3700000.000","revenue_guidance_prior_max":"","revenue_guidance_prior_min":"","importance":0,"notes":"","updated":1609882593},{"id":"5ff4d99962ba1f0001a9f1fb","date":"2021-01-05","time":"16:26:49","ticker":"ACMR","exchange":"NASDAQ","name":"ACM
+        Research","period":"FY","period_year":2021,"is_primary":"Y","prelim":"Y","currency":"USD","eps_type":"","eps_guidance_est":"","eps_guidance_max":"","eps_guidance_min":"","eps_guidance_prior_max":"","eps_guidance_prior_min":"","revenue_type":"GAAP","revenue_guidance_est":"206100000.000","revenue_guidance_max":"230000000.000","revenue_guidance_min":"205000000.000","revenue_guidance_prior_max":"","revenue_guidance_prior_min":"","importance":0,"notes":"","updated":1609882102},{"id":"5ff4d94b62ba1f0001a9f1df","date":"2021-01-05","time":"16:25:31","ticker":"ACMR","exchange":"NASDAQ","name":"ACM
+        Research","period":"FY","period_year":2020,"is_primary":"Y","prelim":"Y","currency":"USD","eps_type":"","eps_guidance_est":"","eps_guidance_max":"","eps_guidance_min":"","eps_guidance_prior_max":"","eps_guidance_prior_min":"","revenue_type":"GAAP","revenue_guidance_est":"151000000.000","revenue_guidance_max":"155000000.000","revenue_guidance_min":"153000000.000","revenue_guidance_prior_max":"155000000.000","revenue_guidance_prior_min":"145000000.000","importance":0,"notes":"","updated":1609882104},{"id":"5ff4d81462ba1f0001a9f1ab","date":"2021-01-05","time":"16:20:20","ticker":"SGH","exchange":"NASDAQ","name":"SMART
+        Glb Hldgs","period":"Q2","period_year":2021,"is_primary":"Y","prelim":"N","currency":"USD","eps_type":"Adj","eps_guidance_est":"0.690","eps_guidance_max":"0.850","eps_guidance_min":"0.750","eps_guidance_prior_max":"","eps_guidance_prior_min":"","revenue_type":"GAAP","revenue_guidance_est":"286200000.000","revenue_guidance_max":"305000000.000","revenue_guidance_min":"285000000.000","revenue_guidance_prior_max":"","revenue_guidance_prior_min":"","importance":0,"notes":"","updated":1609881762},{"id":"5ff470e62bbc220001187f46","date":"2021-01-05","time":"09:00:06","ticker":"FUBO","exchange":"NYSE","name":"FuboTV","period":"Q4","period_year":2020,"is_primary":"Y","prelim":"Y","currency":"USD","eps_type":"","eps_guidance_est":"","eps_guidance_max":"","eps_guidance_min":"","eps_guidance_prior_max":"","eps_guidance_prior_min":"","revenue_type":"GAAP","revenue_guidance_est":"87360000.000","revenue_guidance_max":"98000000.000","revenue_guidance_min":"94000000.000","revenue_guidance_prior_max":"85000000.000","revenue_guidance_prior_min":"80000000.000","importance":0,"notes":"","updated":1609855515},{"id":"5ff46e342bbc220001187ed2","date":"2021-01-05","time":"08:48:36","ticker":"HUM","exchange":"NYSE","name":"Humana","period":"Q4","period_year":2020,"is_primary":"Y","prelim":"Y","currency":"USD","eps_type":"Adj","eps_guidance_est":"-2.370","eps_guidance_max":"-2.400","eps_guidance_min":"-2.400","eps_guidance_prior_max":"-2.400","eps_guidance_prior_min":"-2.400","revenue_type":"","revenue_guidance_est":"","revenue_guidance_max":"","revenue_guidance_min":"","revenue_guidance_prior_max":"","revenue_guidance_prior_min":"","importance":0,"notes":"","updated":1609855112},{"id":"5ff46dea2bbc220001187ea5","date":"2021-01-05","time":"08:47:22","ticker":"HUM","exchange":"NYSE","name":"Humana","period":"FY","period_year":2020,"is_primary":"Y","prelim":"Y","currency":"USD","eps_type":"Adj","eps_guidance_est":"18.670","eps_guidance_max":"18.750","eps_guidance_min":"18.500","eps_guidance_prior_max":"18.750","eps_guidance_prior_min":"18.500","revenue_type":"","revenue_guidance_est":"","revenue_guidance_max":"","revenue_guidance_min":"","revenue_guidance_prior_max":"","revenue_guidance_prior_min":"","importance":0,"notes":"","updated":1609855116},{"id":"5ff4665f2bbc220001187958","date":"2021-01-05","time":"08:15:11","ticker":"HTGM","exchange":"NASDAQ","name":"HTG
+        Molecular Diagnostics","period":"FY","period_year":2020,"is_primary":"Y","prelim":"Y","currency":"USD","eps_type":"","eps_guidance_est":"","eps_guidance_max":"","eps_guidance_min":"","eps_guidance_prior_max":"","eps_guidance_prior_min":"","revenue_type":"GAAP","revenue_guidance_est":"8030000.000","revenue_guidance_max":"8500000.000","revenue_guidance_min":"8500000.000","revenue_guidance_prior_max":"","revenue_guidance_prior_min":"","importance":0,"notes":"","updated":1609852604}]}'
+  recorded_at: Wed, 13 Jan 2021 05:29:54 GMT
+recorded_with: VCR 6.0.0

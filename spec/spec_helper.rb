@@ -5,6 +5,7 @@ require 'rspec'
 require 'dotenv'
 
 require 'iex-ruby-client'
+require 'cloud-quote-ruby-client'
 
 Dir[File.join(File.dirname(__FILE__), 'support', '**/*.rb')].sort.each do |file|
   require file

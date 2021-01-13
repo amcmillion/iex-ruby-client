@@ -18,7 +18,7 @@ module IEX
         # get("stock/market/upcoming-events", { token: publishable_token, fullUpcomingEarnings: true }.merge(options))['earnings'].map do |data|
         get("stock/market/upcoming-events?token=Tsk_e6fcd3bf4cd84d6698eff08b55a5d0a6",
             { use_sandbox: true }.merge(options)
-        ).map do |data|
+           ).map do |data|
 
           return data[1]
           # TODO: IEX::Resources::UpcomingMarketEvents.new(data)
