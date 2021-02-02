@@ -1,0 +1,112 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cloud.iexapis.com/v1/stock/AAPL/insider-transactions?token=test-iex-api-publishable-token
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      Content-Type:
+      - application/json; charset=utf-8
+      User-Agent:
+      - IEX Ruby Client/1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 03 Feb 2021 04:52:37 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - ctoken=d214f651591844dc8cb425917fb99b29; Max-Age=43200; Path=/; Expires=Wed,
+        03 Feb 2021 16:52:37 GMT
+      Iexcloud-Messages-Used:
+      - '1850'
+      Iexcloud-Premium-Messages-Used:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Request-Source
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1580688000000,"filingDate":"2020-02-04","fullName":"LEVINSON
+        ARTHUR D","is10b51":false,"postShares":1133280,"reportedTitle":null,"symbol":"AAPL","transactionCode":"S","transactionDate":"2020-02-03","transactionPrice":304.11,"transactionShares":-1429,"transactionValue":434573,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000021","date":1580688000000,"updated":1610580919000,"tranPrice":304.11,"tranShares":-1429,"tranValue":434573},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1582675200000,"filingDate":"2020-02-28","fullName":"WAGNER
+        SUSAN","is10b51":false,"postShares":854,"reportedTitle":null,"symbol":"AAPL","transactionCode":"A","transactionDate":"2020-02-26","transactionPrice":null,"transactionShares":854,"transactionValue":null,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000035","date":1582675200000,"updated":1606370196000,"tranPrice":null,"tranShares":854,"tranValue":null},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1582675200000,"filingDate":"2020-02-28","fullName":"JUNG
+        ANDREA","is10b51":false,"postShares":854,"reportedTitle":null,"symbol":"AAPL","transactionCode":"A","transactionDate":"2020-02-26","transactionPrice":null,"transactionShares":854,"transactionValue":null,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000032","date":1582675200000,"updated":1606370462000,"tranPrice":null,"tranShares":854,"tranValue":null},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1582675200000,"filingDate":"2020-02-28","fullName":"LEVINSON
+        ARTHUR D","is10b51":false,"postShares":854,"reportedTitle":null,"symbol":"AAPL","transactionCode":"A","transactionDate":"2020-02-26","transactionPrice":null,"transactionShares":854,"transactionValue":null,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000033","date":1582675200000,"updated":1607326327000,"tranPrice":null,"tranShares":854,"tranValue":null},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1582675200000,"filingDate":"2020-02-28","fullName":"BELL
+        JAMES A","is10b51":false,"postShares":854,"reportedTitle":null,"symbol":"AAPL","transactionCode":"A","transactionDate":"2020-02-26","transactionPrice":null,"transactionShares":854,"transactionValue":null,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000030","date":1582675200000,"updated":1610580841000,"tranPrice":null,"tranShares":854,"tranValue":null},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1582675200000,"filingDate":"2020-02-28","fullName":"GORE
+        ALBERT JR","is10b51":false,"postShares":854,"reportedTitle":null,"symbol":"AAPL","transactionCode":"A","transactionDate":"2020-02-26","transactionPrice":null,"transactionShares":854,"transactionValue":null,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000031","date":1582675200000,"updated":1610580857000,"tranPrice":null,"tranShares":854,"tranValue":null},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1582675200000,"filingDate":"2020-02-28","fullName":"SUGAR
+        RONALD D","is10b51":false,"postShares":854,"reportedTitle":null,"symbol":"AAPL","transactionCode":"A","transactionDate":"2020-02-26","transactionPrice":null,"transactionShares":854,"transactionValue":null,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000034","date":1582675200000,"updated":1610580941000,"tranPrice":null,"tranShares":854,"tranValue":null},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1585699200000,"filingDate":"2020-04-03","fullName":"Maestri
+        Luca","is10b51":false,"postShares":42466,"reportedTitle":"Senior Vice President,
+        CFO","symbol":"AAPL","transactionCode":"M","transactionDate":"2020-04-01","transactionPrice":null,"transactionShares":21233,"transactionValue":null,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000038","date":1585699200000,"updated":1612308892000,"tranPrice":null,"tranShares":21233,"tranValue":null},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1585699200000,"filingDate":"2020-04-03","fullName":"WILLIAMS
+        JEFFREY E","is10b51":false,"postShares":42466,"reportedTitle":"COO","symbol":"AAPL","transactionCode":"M","transactionDate":"2020-04-01","transactionPrice":null,"transactionShares":21233,"transactionValue":null,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000039","date":1585699200000,"updated":1612309025000,"tranPrice":null,"tranShares":21233,"tranValue":null},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1585785600000,"filingDate":"2020-04-03","fullName":"WILLIAMS
+        JEFFREY E","is10b51":false,"postShares":108329,"reportedTitle":"COO","symbol":"AAPL","transactionCode":"S","transactionDate":"2020-04-02","transactionPrice":244.98,"transactionShares":-845,"transactionValue":207008,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000039","date":1585785600000,"updated":1612309025000,"tranPrice":244.98,"tranShares":-845,"tranValue":207008},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1586217600000,"filingDate":"2020-04-09","fullName":"Maestri
+        Luca","is10b51":false,"postShares":27568,"reportedTitle":"Senior Vice President,
+        CFO","symbol":"AAPL","transactionCode":"S","transactionDate":"2020-04-07","transactionPrice":269.44,"transactionShares":-1200,"transactionValue":323328,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000041","date":1586217600000,"updated":1612308848000,"tranPrice":269.44,"tranShares":-1200,"tranValue":323328},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1586908800000,"filingDate":"2020-04-17","fullName":"O''BRIEN
+        DEIRDRE","is10b51":false,"postShares":20765,"reportedTitle":"Senior Vice President","symbol":"AAPL","transactionCode":"M","transactionDate":"2020-04-15","transactionPrice":null,"transactionShares":4153,"transactionValue":null,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000045","date":1586908800000,"updated":1612308673000,"tranPrice":null,"tranShares":4153,"tranValue":null},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1586908800000,"filingDate":"2020-04-17","fullName":"KONDO
+        CHRIS","is10b51":false,"postShares":7997,"reportedTitle":"Principal Accounting
+        Officer","symbol":"AAPL","transactionCode":"M","transactionDate":"2020-04-15","transactionPrice":null,"transactionShares":1143,"transactionValue":null,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000044","date":1586908800000,"updated":1612308666000,"tranPrice":null,"tranShares":1143,"tranValue":null},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1586995200000,"filingDate":"2020-04-17","fullName":"O''BRIEN
+        DEIRDRE","is10b51":false,"postShares":33972,"reportedTitle":"Senior Vice President","symbol":"AAPL","transactionCode":"S","transactionDate":"2020-04-16","transactionPrice":286.82,"transactionShares":-2161,"transactionValue":619818,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000045","date":1586995200000,"updated":1612308673000,"tranPrice":286.82,"tranShares":-2161,"tranValue":619818},{"conversionOrExercisePrice":48.9457,"directIndirect":"D","effectiveDate":1588032000000,"filingDate":"2020-04-30","fullName":"JUNG
+        ANDREA","is10b51":false,"postShares":0,"reportedTitle":null,"symbol":"AAPL","transactionCode":"M","transactionDate":"2020-04-28","transactionPrice":null,"transactionShares":9590,"transactionValue":null,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000054","date":1588032000000,"updated":1612308682000,"tranPrice":null,"tranShares":9590,"tranValue":null},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1588896000000,"filingDate":"2020-05-12","fullName":"KONDO
+        CHRIS","is10b51":false,"postShares":7370,"reportedTitle":"Principal Accounting
+        Officer","symbol":"AAPL","transactionCode":"S","transactionDate":"2020-05-08","transactionPrice":305.62,"transactionShares":-4491,"transactionValue":1372540,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000056","date":1588896000000,"updated":1605924179000,"tranPrice":305.62,"tranShares":-4491,"tranValue":1372540},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1597881600000,"filingDate":"2020-08-24","fullName":"COOK
+        TIMOTHY D","is10b51":false,"postShares":837374,"reportedTitle":"Chief Executive
+        Officer","symbol":"AAPL","transactionCode":"G","transactionDate":"2020-08-20","transactionPrice":null,"transactionShares":-10715,"transactionValue":null,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000064","date":1597881600000,"updated":1605923883000,"tranPrice":null,"tranShares":-10715,"tranValue":null},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1598227200000,"filingDate":"2020-08-25","fullName":"COOK
+        TIMOTHY D","is10b51":false,"postShares":1260000,"reportedTitle":"Chief Executive
+        Officer","symbol":"AAPL","transactionCode":"M","transactionDate":"2020-08-24","transactionPrice":null,"transactionShares":560000,"transactionValue":null,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000066","date":1598227200000,"updated":1612309149000,"tranPrice":null,"tranShares":560000,"tranValue":null},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1598313600000,"filingDate":"2020-08-25","fullName":"COOK
+        TIMOTHY D","is10b51":false,"postShares":837374,"reportedTitle":"Chief Executive
+        Officer","symbol":"AAPL","transactionCode":"S","transactionDate":"2020-08-25","transactionPrice":500.11,"transactionShares":-990,"transactionValue":495109,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000066","date":1598313600000,"updated":1612309149000,"tranPrice":500.11,"tranShares":-990,"tranValue":495109},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1601164800000,"filingDate":"2020-09-29","fullName":"KONDO
+        CHRIS","is10b51":false,"postShares":17813,"reportedTitle":"Principal Accounting
+        Officer","symbol":"AAPL","transactionCode":"A","transactionDate":"2020-09-27","transactionPrice":null,"transactionShares":17813,"transactionValue":null,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000075","date":1601164800000,"updated":1605923870000,"tranPrice":null,"tranShares":17813,"tranValue":null},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1601164800000,"filingDate":"2020-09-29","fullName":"Maestri
+        Luca","is10b51":false,"postShares":89064,"reportedTitle":"Senior Vice President,
+        CFO","symbol":"AAPL","transactionCode":"A","transactionDate":"2020-09-27","transactionPrice":null,"transactionShares":89064,"transactionValue":null,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000076","date":1601164800000,"updated":1605923879000,"tranPrice":null,"tranShares":89064,"tranValue":null},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1601164800000,"filingDate":"2020-09-29","fullName":"COOK
+        TIMOTHY D","is10b51":false,"postShares":333987,"reportedTitle":"Chief Executive
+        Officer","symbol":"AAPL","transactionCode":"A","transactionDate":"2020-09-27","transactionPrice":null,"transactionShares":333987,"transactionValue":null,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000074","date":1601164800000,"updated":1605923879000,"tranPrice":null,"tranShares":333987,"tranValue":null},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1601164800000,"filingDate":"2020-09-29","fullName":"Adams
+        Katherine L.","is10b51":false,"postShares":89064,"reportedTitle":"SVP, GC
+        and Secretary","symbol":"AAPL","transactionCode":"A","transactionDate":"2020-09-27","transactionPrice":null,"transactionShares":89064,"transactionValue":null,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000073","date":1601164800000,"updated":1605923998000,"tranPrice":null,"tranShares":89064,"tranValue":null},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1601164800000,"filingDate":"2020-09-29","fullName":"WILLIAMS
+        JEFFREY E","is10b51":false,"postShares":89064,"reportedTitle":"COO","symbol":"AAPL","transactionCode":"A","transactionDate":"2020-09-27","transactionPrice":null,"transactionShares":89064,"transactionValue":null,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000078","date":1601164800000,"updated":1605924007000,"tranPrice":null,"tranShares":89064,"tranValue":null},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1601164800000,"filingDate":"2020-09-29","fullName":"O''BRIEN
+        DEIRDRE","is10b51":false,"postShares":89064,"reportedTitle":"Senior Vice President","symbol":"AAPL","transactionCode":"A","transactionDate":"2020-09-27","transactionPrice":null,"transactionShares":89064,"transactionValue":null,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000077","date":1601164800000,"updated":1605924179000,"tranPrice":null,"tranShares":89064,"tranValue":null},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1601510400000,"filingDate":"2020-10-05","fullName":"Maestri
+        Luca","is10b51":false,"postShares":0,"reportedTitle":"Senior Vice President,
+        CFO","symbol":"AAPL","transactionCode":"M","transactionDate":"2020-10-01","transactionPrice":null,"transactionShares":519080,"transactionValue":null,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000083","date":1601510400000,"updated":1612309155000,"tranPrice":null,"tranShares":519080,"tranValue":null},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1601510400000,"filingDate":"2020-10-05","fullName":"Adams
+        Katherine L.","is10b51":false,"postShares":0,"reportedTitle":"SVP, GC and
+        Secretary","symbol":"AAPL","transactionCode":"M","transactionDate":"2020-10-01","transactionPrice":null,"transactionShares":459856,"transactionValue":null,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000082","date":1601510400000,"updated":1612308823000,"tranPrice":null,"tranShares":459856,"tranValue":null},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1601510400000,"filingDate":"2020-10-05","fullName":"WILLIAMS
+        JEFFREY E","is10b51":false,"postShares":0,"reportedTitle":"COO","symbol":"AAPL","transactionCode":"M","transactionDate":"2020-10-01","transactionPrice":null,"transactionShares":519080,"transactionValue":null,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000084","date":1601510400000,"updated":1612308848000,"tranPrice":null,"tranShares":519080,"tranValue":null},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1601596800000,"filingDate":"2020-10-05","fullName":"WILLIAMS
+        JEFFREY E","is10b51":false,"postShares":489260,"reportedTitle":"COO","symbol":"AAPL","transactionCode":"S","transactionDate":"2020-10-02","transactionPrice":114.19,"transactionShares":-28386,"transactionValue":3241400,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000084","date":1601596800000,"updated":1612308848000,"tranPrice":114.19,"tranShares":-28386,"tranValue":3241400},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1602201600000,"filingDate":"2020-10-13","fullName":"Maestri
+        Luca","is10b51":false,"postShares":110272,"reportedTitle":"Senior Vice President,
+        CFO","symbol":"AAPL","transactionCode":"S","transactionDate":"2020-10-09","transactionPrice":116.89,"transactionShares":-243431,"transactionValue":28454600,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000086","date":1602201600000,"updated":1612308823000,"tranPrice":116.89,"tranShares":-243431,"tranValue":28454600},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1602720000000,"filingDate":"2020-10-19","fullName":"KONDO
+        CHRIS","is10b51":false,"postShares":27420,"reportedTitle":"Principal Accounting
+        Officer","symbol":"AAPL","transactionCode":"M","transactionDate":"2020-10-15","transactionPrice":null,"transactionShares":4568,"transactionValue":null,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000089","date":1602720000000,"updated":1612308676000,"tranPrice":null,"tranShares":4568,"tranValue":null},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1602720000000,"filingDate":"2020-10-19","fullName":"O''BRIEN
+        DEIRDRE","is10b51":false,"postShares":66448,"reportedTitle":"Senior Vice President","symbol":"AAPL","transactionCode":"M","transactionDate":"2020-10-15","transactionPrice":null,"transactionShares":16612,"transactionValue":null,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000090","date":1602720000000,"updated":1612308957000,"tranPrice":null,"tranShares":16612,"tranValue":null},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1602806400000,"filingDate":"2020-10-19","fullName":"KONDO
+        CHRIS","is10b51":false,"postShares":26876,"reportedTitle":"Principal Accounting
+        Officer","symbol":"AAPL","transactionCode":"S","transactionDate":"2020-10-16","transactionPrice":121.34,"transactionShares":-14840,"transactionValue":1800690,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000089","date":1602806400000,"updated":1612308675000,"tranPrice":121.34,"tranShares":-14840,"tranValue":1800690},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1602806400000,"filingDate":"2020-10-19","fullName":"O''BRIEN
+        DEIRDRE","is10b51":false,"postShares":135888,"reportedTitle":"Senior Vice
+        President","symbol":"AAPL","transactionCode":"S","transactionDate":"2020-10-16","transactionPrice":120.14,"transactionShares":-12452,"transactionValue":1495980,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000090","date":1602806400000,"updated":1612308957000,"tranPrice":120.14,"tranShares":-12452,"tranValue":1495980},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1604361600000,"filingDate":"2020-11-05","fullName":"Adams
+        Katherine L.","is10b51":false,"postShares":306396,"reportedTitle":"SVP, GC
+        and Secretary","symbol":"AAPL","transactionCode":"S","transactionDate":"2020-11-03","transactionPrice":110.99,"transactionShares":-5747,"transactionValue":637860,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000099","date":1604361600000,"updated":1612308676000,"tranPrice":110.99,"tranShares":-5747,"tranValue":637860},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1605225600000,"filingDate":"2020-11-17","fullName":"Adams
+        Katherine L.","is10b51":false,"postShares":0,"reportedTitle":"SVP, GC and
+        Secretary","symbol":"AAPL","transactionCode":"M","transactionDate":"2020-11-13","transactionPrice":null,"transactionShares":57480,"transactionValue":null,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-20-000101","date":1605225600000,"updated":1612308666000,"tranPrice":null,"tranShares":57480,"tranValue":null},{"conversionOrExercisePrice":null,"directIndirect":"D","effectiveDate":1609718400000,"filingDate":"2021-01-05","fullName":"LOZANO
+        MONICA C","is10b51":false,"postShares":281,"reportedTitle":null,"symbol":"AAPL","transactionCode":"A","transactionDate":"2021-01-04","transactionPrice":null,"transactionShares":281,"transactionValue":null,"id":"INSIDER_TRANSACTIONS","key":"AAPL","subkey":"0000320193-21-000004","date":1609718400000,"updated":1610581043000,"tranPrice":null,"tranShares":281,"tranValue":null}]'
+  recorded_at: Wed, 03 Feb 2021 04:52:37 GMT
+recorded_with: VCR 6.0.0

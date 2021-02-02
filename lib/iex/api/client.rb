@@ -14,6 +14,7 @@ module IEX
       include Endpoints::Earnings
       include Endpoints::HistoricalPrices
       include Endpoints::Income
+      include Endpoints::InsiderTransactions
       include Endpoints::KeyStats
       include Endpoints::LargestTrades
       include Endpoints::Logo
