@@ -406,7 +406,7 @@ See [#earnings](https://iexcloud.io/docs/api/#earnings) for detailed documentati
 Fetches income statements for a symbol.
 
 ```ruby
-income_statements = client.income('MSFT')
+income_statements = client.insider_transactions('MSFT')
 
 # Multiple income statements are returned with 1 API call.
 income = income_statements.first
