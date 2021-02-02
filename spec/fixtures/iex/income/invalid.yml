@@ -44,6 +44,52 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: Unknown symbol
-    http_version:
   recorded_at: Fri, 31 Jan 2020 23:27:10 GMT
-recorded_with: VCR 5.0.0
+- request:
+    method: get
+    uri: https://cloud.iexapis.com/v1/stock/INVALID/insider-transactions?token=test-iex-api-publishable-token
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      Content-Type:
+      - application/json; charset=utf-8
+      User-Agent:
+      - IEX Ruby Client/1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 07 Feb 2021 22:33:35 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - ctoken=24c7b1d3bf2444b484b4a3c2c40a4090; Max-Age=43200; Path=/; Expires=Mon,
+        08 Feb 2021 10:33:35 GMT
+      Strict-Transport-Security:
+      - max-age=15768000
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Request-Source
+    body:
+      encoding: ASCII-8BIT
+      string: Unknown symbol
+  recorded_at: Sun, 07 Feb 2021 22:33:35 GMT
+recorded_with: VCR 6.0.0
