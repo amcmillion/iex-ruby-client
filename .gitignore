@@ -1,4 +1,6 @@
 .env
+.env.*
+.env.sample
 pkg
 Gemfile.lock
 .DS_Store
