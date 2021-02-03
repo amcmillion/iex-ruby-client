@@ -1,6 +1,6 @@
 module IEX
   module Resources
-    class UpcomingEvents < Resource
+    class EarningsEvent < Resource
       property 'symbol'
       property 'symbol_id', from: 'symbolId'
       property 'fiscal_period', from: 'fiscalPeriod'

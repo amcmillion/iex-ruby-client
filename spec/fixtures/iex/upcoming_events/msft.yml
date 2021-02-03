@@ -1,0 +1,104 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cloud.iexapis.com/v1/stock/MSFT/upcoming-events?fullUpcomingEarnings=true&token=test-iex-api-publishable-token
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      Content-Type:
+      - application/json; charset=utf-8
+      User-Agent:
+      - IEX Ruby Client/1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 03 Feb 2021 02:30:37 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - ctoken=41addaf8c5b84fb19752bcdcf2bf7c3c; Max-Age=43200; Path=/; Expires=Wed,
+        03 Feb 2021 14:30:37 GMT
+      Strict-Transport-Security:
+      - max-age=15768000
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Request-Source
+    body:
+      encoding: ASCII-8BIT
+      string: The API key provided is not valid.
+  recorded_at: Wed, 03 Feb 2021 02:30:37 GMT
+- request:
+    method: get
+    uri: https://cloud.iexapis.com/v1/stock/MSFT/upcoming-events?token=test-iex-api-publishable-token
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      Content-Type:
+      - application/json; charset=utf-8
+      User-Agent:
+      - IEX Ruby Client/1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 03 Feb 2021 02:44:26 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - ctoken=cf40b1cd7122494d8845dd5c3ffe62dd; Max-Age=43200; Path=/; Expires=Wed,
+        03 Feb 2021 14:44:26 GMT
+      Iexcloud-Messages-Used:
+      - '10'
+      Iexcloud-Premium-Messages-Used:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=15768000
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Request-Source
+    body:
+      encoding: ASCII-8BIT
+      string: '{"earnings":[],"dividends":[{"amount":0.56,"currency":"USD","declaredDate":"2020-12-02","description":"Ordinary
+        Shares","exDate":"2021-02-17","flag":"Cash","frequency":"quarterly","paymentDate":"2021-03-11","recordDate":"2021-02-18","refid":2080289,"symbol":"MSFT","id":"DIVIDENDS","key":"MSFT","subkey":"2080289","date":1613520000000,"updated":1608134902000}],"splits":[]}'
+  recorded_at: Wed, 03 Feb 2021 02:44:26 GMT
+recorded_with: VCR 6.0.0

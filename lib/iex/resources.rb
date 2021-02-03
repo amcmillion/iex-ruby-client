@@ -20,4 +20,5 @@ require_relative 'resources/sectors'
 require_relative 'resources/crypto'
 require_relative 'resources/symbol'
 require_relative 'resources/symbols'
-require_relative 'resources/upcoming_events'
+
+require_relative 'resources/earnings_event'

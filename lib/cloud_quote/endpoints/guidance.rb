@@ -4,6 +4,7 @@ module CloudQuote
       def guidance(start_date, end_date, options = {})
         raise ArgumentError, 'End date must be after start date' if end_date < start_date
 
+        # curl -i -H "Accept: application/json" curl -X GET "https://api.benzinga.com/api/v2.1/calendar/earn6&parameters%5Btickers%5D=AAPL" -H  "accept: application/json"
         get(
           'benzinga/getGuidance.json',
           {
