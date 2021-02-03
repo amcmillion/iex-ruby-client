@@ -10,6 +10,8 @@ describe IEX::Resources::Dividends do
       end
       let(:dividends) { subject.first }
       it 'retrieves dividends' do
+        pp dividends
+        d = dividends
         expect(dividends.ex_date).to eq '2019-05-15'
         expect(dividends.payment_date).to eq '2019-06-13'
         expect(dividends.record_date).to eq '2019-05-16'
