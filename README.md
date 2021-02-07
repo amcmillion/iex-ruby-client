@@ -54,6 +54,14 @@ gem 'iex-ruby-client'
 
 Run `bundle install`.
 
+## Development
+
+Copy `.env.sample` to `.env` and then replace the keys in `.env` with your developer tokens.
+
+```
+cp .env.sample .env
+```
+
 ## Usage
 
 ### Get an API Token
