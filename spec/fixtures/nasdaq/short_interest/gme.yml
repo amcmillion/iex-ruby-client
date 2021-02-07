@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.nasdaq.com/api//quote/GME/short-interest?assetClass=stocks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      Content-Type:
+      - application/json; charset=utf-8
+      User-Agent:
+      - NASDAQ Ruby Client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Server:
+      - Kestrel
+      Lang:
+      - en
+      Srctype:
+      - default
+      Rid:
+      - 8ffe6442-74de-4365-a73f-e6ce7a9993bd
+      Gid:
+      - '0232'
+      X-Edgeconnect-Midmile-Rtt:
+      - '0'
+      - '0'
+      X-Edgeconnect-Origin-Mex-Latency:
+      - '29'
+      - '29'
+      Vary:
+      - Accept-Encoding
+      Expires:
+      - Sun, 07 Feb 2021 04:27:56 GMT
+      Cache-Control:
+      - max-age=0, no-cache, no-store
+      Pragma:
+      - no-cache
+      Date:
+      - Sun, 07 Feb 2021 04:27:56 GMT
+      Content-Length:
+      - '183'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - ak_bmsc=4D8F3B8FE50F900AA4F369C697C3881568627665F42E00004C6C1F600E9F373F~pluWFRcJ3b2YHYmpg2hh1xPyxkSH2dZFaChfSM4RsdTa0cXTA7k6NU7Zf7h9I1xZCl4HFj/jvzYVYRrS/pW2/NbKa1p3uyKDfB7aOzz8b3ASQuMWUgGyOc3TjAPAoXH0XWDGwrXR6qCywR6hj7jU/8WOTa6kQT2N77g4wwVkitVnmuRGJf5Tf1wRfYJpuyLdgLbyjZoJnfT9k7iSmobIw6kATPjHZG0dIJWwlHwoUM5fc=;
+        expires=Sun, 07 Feb 2021 06:27:56 GMT; max-age=7200; path=/; domain=.nasdaq.com;
+        HttpOnly
+      Strict-Transport-Security:
+      - max-age=86400
+    body:
+      encoding: UTF-8
+      string: '{"data":null,"message":"Short interest is not available. Short interest
+        is only supported for Nasdaq Listed stocks","status":{"rCode":200,"bCodeMessage":null,"developerMessage":null}}'
+  recorded_at: Sun, 07 Feb 2021 04:27:56 GMT
+recorded_with: VCR 6.0.0
