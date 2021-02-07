@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.nasdaq.com/api//stock/msft/quote?token
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      Content-Type:
+      - application/json; charset=utf-8
+      User-Agent:
+      - NASDAQ Ruby Client/0.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Length:
+      - '0'
+      Server:
+      - Kestrel
+      Lang:
+      - en
+      Srctype:
+      - default
+      Rid:
+      - 1d0ebdc5-f4e5-4032-ab0a-668477bf2d6c
+      Gid:
+      - '0131'
+      X-Edgeconnect-Midmile-Rtt:
+      - '50'
+      X-Edgeconnect-Origin-Mex-Latency:
+      - '33'
+      Date:
+      - Sun, 07 Feb 2021 04:54:37 GMT
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - NSC_W.OEBR.DPN.7070=ffffffffc3a0f70e45525d5f4f58455e445a4a422dae;expires=Sun,
+        07-Feb-2021 05:04:37 GMT;path=/;secure;httponly
+      Strict-Transport-Security:
+      - max-age=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sun, 07 Feb 2021 04:54:37 GMT
+recorded_with: VCR 6.0.0
