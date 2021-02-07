@@ -6,6 +6,7 @@ require 'dotenv'
 
 require 'iex-ruby-client'
 require 'cloud-quote-ruby-client'
+require 'nasdaq-ruby-client'
 
 Dir[File.join(File.dirname(__FILE__), 'support', '**/*.rb')].sort.each do |file|
   require file
